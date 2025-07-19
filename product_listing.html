@@ -1,0 +1,139 @@
+<-6.Project: Basic E-commerce Product Listing (HTML Tables/Lists, Semantic HTML, CSS Styling)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop – Product Listing</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7fafb;
+            margin: 0; 
+            padding: 24px;
+        }
+        h1 {
+            text-align: center;
+            color: #2e4053;
+            margin-bottom: 28px;
+        }
+        table.product-listing {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(40,60,90,.05);
+            overflow: hidden;
+        }
+        th, td {
+            padding: 18px 10px;
+            text-align: left;
+        }
+        th {
+            background: #34495e;
+            color: #fff;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+        tr:not(:last-child) {
+            border-bottom: 1.5px solid #e4ebf1;
+        }
+        .product-name {
+            font-weight: bold;
+            letter-spacing: 0.04em;
+        }
+        .price {
+            color: #138d75;
+            font-weight: bold;
+        }
+        button.add-to-cart {
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 9px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        button.add-to-cart:hover {
+            background: #1b4f72;
+        }
+
+        /* "Sold Out" row style */
+        tr.sold-out { 
+            background: #fff9f8;
+        }
+        .soldout-text {
+            color: #e74c3c;
+            font-weight: bold;
+            font-style: italic;
+            border: 1px solid #e74c3c;
+            border-radius: 6px;
+            background: #fceeea;
+            padding: 4px 10px;
+            font-size: 0.97em;
+        }
+        button.add-to-cart[disabled] {
+            background: #bdc3c7;
+            color: #888;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <table class="product-listing" aria-label="List of available and sold out products">
+        <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="product-name">SunnySkin Sunscreen</td>
+                <td>Lightweight SPF 50 sunscreen for everyday use.</td>
+                <td class="price">$19.99</td>
+                <td>In Stock</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="product-name">GreenBoost Smoothie Mix</td>
+                <td>Organic, nutrient-packed blend for energy boosts.</td>
+                <td class="price">$14.49</td>
+                <td>In Stock</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="product-name">NightOwl Sleep Mask</td>
+                <td>Comfortable, light-blocking sleep mask (adjustable).</td>
+                <td class="price">$11.99</td>
+                <td>In Stock</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td class="product-name">EcoBrew Coffee Mug</td>
+                <td>Reusable insulated mug. Keeps drinks warm for 8h.</td>
+                <td class="price">$23.99</td>
+                <td>In Stock</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
+            </tr>
+            <tr class="sold-out">
+                <td class="product-name">Wireless Earbuds</td>
+                <td>Bluetooth 5.2, with case. Up to 24h battery life.</td>
+                <td class="price">$34.99</td>
+                <td><span class="soldout-text">Sold Out</span></td>
+                <td>
+                    <button class="add-to-cart" disabled aria-disabled="true" title="Sold Out">Add to Cart</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

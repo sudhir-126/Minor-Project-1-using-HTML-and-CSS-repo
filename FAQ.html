@@ -1,0 +1,105 @@
+<--9.Project: Simple FAQ Section (HTML Lists, Basic CSS)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f9faff;
+            color: #2d3546;
+            margin: 0;
+            padding: 0 0 40px 0;
+        }
+        .faq-section {
+            max-width: 650px;
+            margin: 48px auto 0 auto;
+            padding: 32px 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 14px rgba(30, 56, 110, 0.09);
+        }
+        .faq-title {
+            text-align: center;
+            color: #234288;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.01em;
+        }
+        ul.faq-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.faq-list li {
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1.5px dashed #e6edf7;
+        }
+        ul.faq-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* Question style */
+        .faq-list .question {
+            display: block;
+            font-weight: 700;
+            color: #1d2446;
+            font-size: 1.09rem;
+            margin-bottom: 8px;
+            background: #eff4fa;
+            padding: 8px 13px;
+            border-left: 4px solid #5083d2;
+            border-radius: 4px 0 0 4px;
+        }
+
+        /* Answer style */
+        .faq-list .answer {
+            color: #545d66;
+            background: #f7fafd;
+            font-size: 1rem;
+            padding: 7px 13px 7px 18px;
+            border-left: 3px solid #d6e2f1;
+            border-radius: 0 4px 4px 0;
+            margin-left: 4px;
+        }
+        /* Responsive tweaks */
+        @media (max-width: 500px) {
+            .faq-section {
+                padding: 18px 7px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <ul class="faq-list">
+            <li>
+                <span class="question">What payment methods do you accept?</span>
+                <div class="answer">We accept all major credit cards (Visa, MasterCard, Amex), PayPal, and Apple Pay.</div>
+            </li>
+            <li>
+                <span class="question">How long does shipping take?</span>
+                <div class="answer">Orders are processed within 24 hours. Standard shipping takes 3–7 business days; expedited options are available at checkout.</div>
+            </li>
+            <li>
+                <span class="question">Can I return or exchange a product?</span>
+                <div class="answer">Yes, you may return any product within 30 days as long as it is in unused condition. Please visit our returns page for detailed instructions.</div>
+            </li>
+            <li>
+                <span class="question">How do I track my order?</span>
+                <div class="answer">Once your order ships, we’ll email you a tracking number. You can track your order on our website using your account dashboard.</div>
+            </li>
+            <li>
+                <span class="question">Where is your customer support located?</span>
+                <div class="answer">Our support team is based in Mumbai, India and is available Monday to Saturday, 9 am – 7 pm IST. Reach us by phone, email, or live chat.</div>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

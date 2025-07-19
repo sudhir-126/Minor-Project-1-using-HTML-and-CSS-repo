@@ -1,0 +1,113 @@
+<-8.Project: Basic Blog Homepage (Multiple Articles, Semantic HTML, Basic Layout)->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog – Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        article {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e0e0e0;
+        }
+        article header {
+            background: transparent;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+        article h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2980b9;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            article {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>Understanding Semantic HTML</h2>
+                <div class="meta">By Sudhir Garg • <time datetime="2025-06-10">June 10, 2025</time></div>
+            </header>
+            <p>Semantic HTML5 elements like &lt;article&gt;, &lt;header&gt;, and &lt;footer&gt; help structure your content for better accessibility and SEO. In this post, we explore how to use these tags effectively in modern web development.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+        <article>
+            <header>
+                <h2>Getting Started with CSS Grid</h2>
+                <div class="meta">By Kritika Pandey • <time datetime="2025-05-28">May 28, 2025</time></div>
+            </header>
+            <p>CSS Grid Layout is a powerful tool for creating complex, responsive layouts without the need for floats or positioning hacks. Learn the basics of grid containers and items, and see how you can build flexible designs with minimal code.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+
+        <article>
+            <header>
+                <h2>Responsive Images in 2025</h2>
+                <div class="meta">By Ruchir Singhaniya • <time datetime="2025-05-15">May 15, 2025</time></div>
+            </header>
+            <p>With the variety of devices and screen sizes today, serving the right image to the right user is crucial. This post covers the latest techniques for responsive images, including the &lt;picture&gt; element and modern CSS solutions.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+    </main>
+</body>
+</html>

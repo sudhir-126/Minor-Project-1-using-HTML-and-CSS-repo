@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store – Product Cards</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8fafb;
+            margin: 0;
+            padding: 20px 0;
+        }
+        h1 {
+            text-align: center;
+            color: #355c7d;
+            margin-bottom: 32px;
+        }
+        .product-grid {
+            display: block;
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(60, 82, 166, 0.07);
+            border: 1.5px solid #deeaf4;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            padding: 28px 24px;
+            gap: 30px;
+            transition: box-shadow 0.12s;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 40px rgba(60, 82, 166, 0.16);
+        }
+        .product-info {
+            flex: 2;
+        }
+        .product-title {
+            font-weight: bold;
+            color: #2d3d5d;
+            letter-spacing: 0.03em;
+            font-size: 1.18em;
+        }
+        .product-desc {
+            color: #465877;
+            margin: 7px 0 13px;
+        }
+        .product-price {
+            color: #248032;
+            font-weight: bold;
+            font-size: 1.02em;
+        }
+        .product-action {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        button.add-to-cart {
+            background: #457dde;
+            color: #fff;
+            border: none;
+            padding: 11px 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.06em;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: background 0.14s;
+        }
+        button.add-to-cart:hover {
+            background: #2b4c7e;
+        }
+        .soldout-label {
+            color: #d53445;
+            background: #fcecec;
+            border: 1px solid #eda6b7;
+            padding: 4px 13px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 0.98em;
+            margin-top: 4px;
+        }
+        button.add-to-cart[disabled] {
+            background: #bfcbd4;
+            color: #868e96;
+            cursor: not-allowed;
+        }
+        @media (max-width: 700px) {
+            .product-card {
+                flex-direction: column;
+                padding: 20px 9px;
+                gap: 12px;
+            }
+            .product-action {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Featured Products</h1>
+    <section class="product-grid" aria-label="Featured product cards">
+        <article class="product-card">
+            <div class="product-info">
+                <div class="product-title">Aurora Yoga Mat</div>
+                <div class="product-desc">Eco-friendly, non-slip yoga mat for all fitness levels.</div>
+                <div class="product-price">Rs 29.95</div>
+            </div>
+            <div class="product-action">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-info">
+                <div class="product-title">Hydra Stainless Bottle</div>
+                <div class="product-desc">Keeps drinks cold 24h or hot 12h; 500ml; leakproof.</div>
+                <div class="product-price">Rs 19.99</div>
+            </div>
+            <div class="product-action">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-info">
+                <div class="product-title">ChillZone Hoodie</div>
+                <div class="product-desc">Ultra-soft cotton hoodie. Unisex sizes, 8 colors.</div>
+                <div class="product-price">Rs 45.00</div>
+            </div>
+            <div class="product-action">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-info">
+                <div class="product-title">Wireless Mini Speaker</div>
+                <div class="product-desc">Pocket-size, waterproof, Bluetooth v5 with deep bass.</div>
+                <div class="product-price">Rs 22.50</div>
+            </div>
+            <div class="product-action">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+        <article class="product-card" aria-disabled="true">
+            <div class="product-info">
+                <div class="product-title">Noise-Cancelling Headphones</div>
+                <div class="product-desc">Premium comfort, 40h battery, touch controls. Black.</div>
+                <div class="product-price">Rs 59.99</div>
+            </div>
+            <div class="product-action">
+                <span class="soldout-label">Sold Out</span>
+                <button class="add-to-cart" disabled aria-disabled="true" title="Sold Out">Add to Cart</button>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

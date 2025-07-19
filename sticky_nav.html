@@ -1,0 +1,132 @@
+<--5.Project: Sticky Navigation Bar (CSS Positioning, HTML Structure)--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Example</title>
+    <style>
+        /* Basic page styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            background: #f4f6fa;
+        }
+
+        /* Enable smooth scrolling when jumping to anchors */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Sticky navigation bar styles */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #274690;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 2.5px solid #cdd9ef;
+            box-shadow: 0 2px 8px rgba(45, 70, 144, 0.05);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 24px;
+            font-weight: 500;
+            font-size: 1.12rem;
+            transition: color 0.18s;
+        }
+        nav a:hover, nav a:focus {
+            color: #fcbc2b;
+        }
+
+        /* Content area */
+        main {
+            padding: 40px 14vw;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 90px;
+            padding: 44px 3vw 38px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(39, 70, 144, .06);
+            border: 1.5px solid #e9eef6;
+        }
+        section h2 {
+            margin-top: 0;
+            color: #274690;
+            font-size: 2rem;
+            letter-spacing: 0.01em;
+        }
+        section p {
+            color: #38496b;
+        }
+
+        /* Make content scrollable on smaller screens */
+        @media (max-width: 700px) {
+            main {
+                padding: 36px 4vw;
+            }
+            section {
+                padding: 28px 3vw 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#section1">Introduction</a>
+        <a href="#section2">Details</a>
+        <a href="#section3">Conclusion</a>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to the sticky nav bar demo! This is a long section meant to provide enough scrollable area to demonstrate how the sticky navigation bar works. Sticky navigation bars are great for enhancing usability on pages with lots of content.
+            </p>
+            <p>
+                Keep scrolling to see the navigation bar stay at the top as you move down the page. Click the navigation links to smoothly scroll to other sections.
+            </p>
+            <p>
+                (Place additional text, lists, or content here to make the page longer, if you wish.)
+            </p>
+        </section>
+
+        <section id="section2">
+            <h2>Details</h2>
+            <p>
+                The navigation bar above uses <code>position: sticky</code> and <code>top: 0</code> to stay visible while you scroll. This approach is modern, reliable in most browsers, and doesn't require JavaScript.
+            </p>
+            <ul>
+                <li><b>HTML Structure:</b> Use a top-level <code>&lt;nav&gt;</code> and section IDs.</li>
+                <li><b>Anchor Links:</b> <code>&lt;a href="#sectionX"&gt;</code> links scroll smoothly to the correct content.</li>
+                <li><b>Sticky CSS:</b> <code>position: sticky; top: 0;</code> pins the nav bar to the viewport edge.</li>
+                <li><b>Smooth Scrolling:</b> <code>scroll-behavior: smooth;</code> on <code>&lt;html&gt;</code> makes jumps elegant.</li>
+            </ul>
+            <p>
+                You can customize section heights, colors, or add more sections as needed.
+            </p>
+        </section>
+
+        <section id="section3">
+            <h2>Conclusion</h2>
+            <p>
+                The sticky nav approach enhances navigation on long pages. It keeps important links always accessible. Try scrolling or clicking the nav links above!
+            </p>
+            <p>
+                For accessibility, ensure all links use meaningful text. Mouse and keyboard users benefit as well, and screen readers recognize the <code>&lt;nav&gt;</code> element.
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>

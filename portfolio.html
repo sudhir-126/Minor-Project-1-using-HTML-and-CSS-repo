@@ -1,0 +1,93 @@
+<----- 1.Project: Personal Portfolio Website (HTML Structure, Semantic HTML, Basic CSS) ------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding to support all standard characters -->
+    <meta charset="UTF-8">
+    <!-- Ensure the site is responsive and looks good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic styling for the whole page */
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
+        /* Style the header with a dark background and white text */
+        header { background: #35424a; color: #fff; padding: 20px; text-align: center; }
+        /* Style the navigation bar with a light background */
+        nav { background: #ccc; padding: 10px; text-align: center; }
+        /* Style the navigation links */
+        nav a { margin: 0 10px; text-decoration: none; color: #333; }
+        /* Add padding around the main content area */
+        main { padding: 20px; }
+        /* Style each section with padding and a subtle bottom border */
+        section { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #eee; }
+        /* Style the footer to match the header */
+        footer { background: #35424a; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+        /* Set heading colors to match the header */
+        h1, h2 { color: #35424a; }
+        /* Add margin below each project for separation */
+        .project { margin-bottom: 15px; }
+        /* Style form labels to appear above inputs */
+        form label { display: block; margin-top: 10px; }
+        /* Style form inputs and textarea for consistency */
+        form input, form textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        /* Style the submit button to stand out */
+        form button { background: #35424a; color: #fff; border: none; padding: 10px 20px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Site header with the portfolio title -->
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <!-- Navigation links to jump to different sections -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- Main content area -->
+    <main>
+        <!-- About Me section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a web developer passionate about creating clean, accessible websites.</p>
+        </section>
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Project 1: Personal Blog -->
+            <article class="project">
+                <h3>Personal Blog Website</h3>
+                <p>Designed and developed a responsive personal blog using HTML5, CSS, and a touch of JavaScript. The blog features a clean layout, categorized posts, and a comment section. Focused on semantic markup and accessibility, ensuring the site is easy to navigate for all users, including those using screen readers.</p>
+            </article>
+            <!-- Project 2: E-commerce Product Page -->
+            <article class="project">
+                <h3>E-commerce Product Listing</h3>
+                <p>Built a product listing page for a fictional online store. The page displays product names, descriptions, prices, and an "Add to Cart" button for each item. Implemented a "Sold Out" status with visual cues and used CSS to create a visually appealing, table-like layout without relying on advanced frameworks.</p>
+            </article>
+            <!-- Project 3: Responsive Photo Gallery -->
+            <article class="project">
+                <h3>Responsive Photo Gallery</h3>
+                <p>Created a mobile-friendly photo gallery that displays images in a grid. Used CSS media queries to adjust the layout: single column on mobile, two columns on tablets, and three columns on desktops. The gallery is easy to browse and loads quickly, with proper image alt text for accessibility.</p>
+            </article>
+        </section>
+        <!-- Contact Me section with a form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>

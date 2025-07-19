@@ -1,0 +1,115 @@
+<--4.Project: Simple Grid-Based Gallery (CSS Layout, Responsive Design)--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery with Captions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+        section.gallery-wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1 {
+            text-align: center;
+            color: #28496e;
+            letter-spacing: 1px;
+            margin-bottom: 2.2rem;
+        }
+        ul.gallery {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.gallery li {
+            background: #fff;
+            border: 1.5px solid #c0d3ee;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(60,82,166,0.04);
+            margin-bottom: 18px;
+            padding: 12px;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            box-sizing: border-box;
+            transition: box-shadow 0.15s;
+        }
+        ul.gallery li:hover {
+            box-shadow: 0 4px 20px rgba(40,73,110,0.11);
+        }
+        ul.gallery img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #eaeaea;
+            margin: 0 auto;
+            background: #f0f4f8;
+        }
+        ul.gallery li p {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* ---------- Responsive Media Queries ---------- */
+        @media (min-width: 600px) {
+            ul.gallery li {
+                width: 48%;
+                margin-right: 2%;
+            }
+            ul.gallery li:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        @media (min-width: 900px) {
+            ul.gallery li {
+                width: 31.6%;
+                margin-right: 2%;
+            }
+            ul.gallery li:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="gallery-wrapper">
+        <h1>Travel Moments – Photo Gallery</h1>
+        <ul class="gallery">
+            <li>
+                <img src="a:\Web Development 2025\pexels-pixabay-221387.jpg" alt="Sunset view at the beach">
+                <p>Sunset view at the beach</p>
+            </li>
+            <li>
+                <img src="a:\Web Development 2025\photo-1551632811-561732d1e306.avif" alt="Mountain hiking trail">
+                <p>Mountain hiking trail</p>
+            </li>
+            <li>
+                <img src="a:\Web Development 2025\pexels-peng-liu-45946-169647.jpg" alt="City skyline at night with bright lights">
+                <p>City skyline at night with bright lights</p>
+            </li>
+            <li>
+                <img src="a:\Web Development 2025\stock-photo-winding-gravel-road-through-sunny-green-forest-illuminated-by-sunbeams-through-mist-1033565986.jpg" alt="Peaceful forest walking path">
+                <p>Peaceful forest walking path</p>
+            </li>
+            <li>
+                <img src="a:\Web Development 2025\istockphoto-896245338-2048x2048.jpg" alt="Calm lake reflecting the mountains">
+                <p>Calm lake reflecting the mountains</p>
+            </li>
+            <li>
+                <img src="a:\Web Development 2025\Screenshot 2025-07-16 170756.png" alt="Sandy desert with wind-shaped dunes">
+                <p>Sandy desert with wind-shaped dunes</p>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
